@@ -1,0 +1,56 @@
+public class test4 {
+	static String k="";
+
+	public static int call(String t,String x,String g[]){
+		int count=0;
+		for(int i=0;i<=g.length-1;i++) {
+				String r="";
+		      for(int j=0;j<=g[i].length()-1;j++) {
+		    		  r+=g[i].charAt(j);
+		    	  }
+			if(r.equals(t)) {
+				k+=r;
+				count++;//1
+				break;
+			}else {
+			continue;	
+			}
+		}
+		
+		if(count!=0) {
+			return k.length();//5
+		}
+		return	k.length();
+	}
+	
+	public static void main(String[] args) {
+		
+		String []B = {"lsm", "i", "like","sam",
+				"sung", "apple", "mobile",
+				"ice","cream", "icecream", 
+				"man", "pen", "mango" };
+				
+		String A="ilike";
+			
+		
+		int u=0;
+		for(int i=0;i<=A.length()-1;i++){
+			if(u<=A.length()-1) {
+		String g=A.substring(u,i+1);
+
+
+		int y=call(g,A,B);
+		u=y;
+			}
+		}
+		
+		if(k.equals(A)) {
+			System.out.println("true");
+		}else {
+		System.out.println("false");
+		}
+	}
+}
+
+OUTPUT:
+true
